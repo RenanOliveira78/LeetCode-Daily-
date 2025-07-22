@@ -1,0 +1,1 @@
+This repository was made to document and store the solutions and related code for problem solution in leetcode. Mostly cpp
