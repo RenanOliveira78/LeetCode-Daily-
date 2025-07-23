@@ -1,14 +1,15 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <string>
 using namespace std;
 
 int main() {
-    vector<int> numbers = {1, 2, 3, 4};
+    vector<string> words = {"1", "2", "3"," wor4"};
 
-    cout << numbers.at(1);
-
-    unordered_map<int, int> seen;
+    for(string word : words) {
+        cout << word;
+    }
 
     return 0;
 }
