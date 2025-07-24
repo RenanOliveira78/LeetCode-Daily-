@@ -21,6 +21,13 @@ public:
     }    
 };
 
+class OptimalSolution {
+public:
+    vector<int> minOperations(string boxes) {
+        
+    }
+};
+
 int main() {
     string boxes = "110";
     Solution solution;
