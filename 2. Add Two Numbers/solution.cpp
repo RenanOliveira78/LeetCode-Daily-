@@ -13,12 +13,29 @@ struct ListNode {
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        int sum = 0;
-        
+        int carry = 0;
+        ListNode* l3 = new ListNode();
+        ListNode* l3_head = l3;
 
+        while(l1 || l2 || carry != 0) {
+            int sum = carry;
+            if(l1) {
+                sum += l1->val;
+                l1 = l1->next; 
+            }
 
+            if(l2) {
+                sum += l2->val;
+                l2 = l2->next;
+            }
 
-        return  0;
+            int digit = sum%10;
+            carry = sum / 10;
+            
+            l3->next = new ListNode(digit);
+            l3 = l3->next;
+        }
+        return l3_head->next;
     }
 };
 
@@ -50,6 +67,14 @@ int main() {
 
     cout << "list 2: ";
     PrintList(l2_head);
+
+    cout << "the sum of these two numbers is: ";
+
+    Solution solution;
+
+    ListNode* result = solution.addTwoNumbers(l1_head, l2_head);
+
+    PrintList(result);
 
     return 0;
 }
