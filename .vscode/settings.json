@@ -3,6 +3,15 @@
         "iostream": "cpp",
         "vector": "cpp",
         "xstring": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "ostream": "cpp",
+        "atomic": "cpp",
+        "ios": "cpp",
+        "list": "cpp",
+        "system_error": "cpp",
+        "xhash": "cpp",
+        "xiosbase": "cpp",
+        "xtree": "cpp",
+        "xlocale": "cpp"
     }
 }
