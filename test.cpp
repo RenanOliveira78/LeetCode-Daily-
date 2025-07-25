@@ -25,7 +25,10 @@ int main() {
     cout << Umap['b'] << " " << Omap[2] << endl;
 
     string substring = word.substr(2, 1);
-    cout << substring;
+    cout << substring << endl;
+
+    string a = "gamer and hot"; 
+    cout << "removing: " << a.erase(1, 3);
 
     
     return 0;
