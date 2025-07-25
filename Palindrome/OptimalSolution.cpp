@@ -7,13 +7,18 @@ using namespace std;
 class Solution {
 public:
     bool validPalindromeRemove1(string s, int right, int left) {
+        cout << s << endl;
+        cout << "right: " << right << endl;
+        cout << "left: " << left << endl;
 
-        for(; left < (s.length())/2; left++) {
+        for(; left < right; left++) {
+            cout << s.at(left) << " : " << s.at(right) << endl;
             if(s.at(left) != s.at(right)) {
                 return false;
             }
             right--;
         }
+        cout << s.at(left) << " : " << s.at(right) << endl;
         return true;
     }
 
@@ -24,7 +29,7 @@ public:
         for(int left = 0; left < (s.length())/2; left++) {
             if(s.at(left) != s.at(right)) {
                 //try wiht the removal of characters
-                if(validPalindromeRemove1(s, right+1, left) || validPalindromeRemove1(s, right, left+1)){
+                if(validPalindromeRemove1(s, right-1, left) || validPalindromeRemove1(s, right, left+1)){
                     return  true;
                 }
                     return false;
@@ -43,7 +48,7 @@ int main() {
 
     Solution solution;
 
-    cout << solution.validPalindrome(s);
+    cout << solution.validPalindrome("abc");
 
     return 0;
 }
