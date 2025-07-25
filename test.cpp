@@ -22,7 +22,10 @@ int main() {
         Omap[word.at(i)] = i;
     }
 
-    cout << Umap['b'] << " " << Omap[2];
+    cout << Umap['b'] << " " << Omap[2] << endl;
+
+    string substring = word.substr(2, 1);
+    cout << substring;
 
     
     return 0;
