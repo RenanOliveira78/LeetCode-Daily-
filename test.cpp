@@ -25,7 +25,11 @@ int main() {
     cout << Umap['b'] << " " << Omap[2] << endl;
 
     string substring = word.substr(2, 1);
-    cout << substring;
+    cout << substring << endl;
+
+    int num = 3478;
+
+    cout << num/10 << " " << num%10;
 
     
     return 0;
