@@ -29,8 +29,14 @@ int main() {
 
     int num = 3478;
 
-    cout << num/10 << " " << num%10;
+    cout << num/10 << " " << num%10 << endl;
 
-    
+    string test = "IV";
+    string test2 = "IVXL";
+
+    cout << test2.substr(0) << endl;
+
+    cout << test2.substr(3, 4) << endl;
+
     return 0;
 }
