@@ -37,6 +37,7 @@ int main() {
     cout << test2.substr(0) << endl;
 
     cout << test2.substr(3, 4) << endl;
+ 
 
     return 0;
 }

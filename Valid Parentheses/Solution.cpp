@@ -32,7 +32,7 @@ public:
 
 int main() {
 
-    string s = "()";
+    string s = "())))";
 
     Solution solution;
     bool check = solution.isValid(s);
