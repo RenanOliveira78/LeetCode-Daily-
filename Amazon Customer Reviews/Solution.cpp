@@ -26,7 +26,7 @@ public:
         for(int i = 1; i != customerQuery.length(); i++){
             vector<string> suggestion;
             for(string keyword : repository) {
-                cout << customerQuery.substr(0, i+1) << endl;
+                //cout << customerQuery.substr(0, i+1) << endl;
                 if(customerQuery.substr(0, i+1) == keyword.substr(0, i+1)) {
                     suggestion.push_back(keyword);
                 }
