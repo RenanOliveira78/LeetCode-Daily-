@@ -18,6 +18,12 @@ public:
     //lower case
     //return empty array case not possible to output (no suggestion)
     
+
+    // O(n times m) 
+    // improvemt -> hash map the repository
+
+
+
     void toLowerString(string &s) {
         for(char &c : s) {
             c = tolower(c);
