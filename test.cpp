@@ -67,7 +67,25 @@ int main() {
     string u = "EWIOUYnc";
     toLowerString(u);
 
-    cout << u;
+    cout << u << endl;
+
+    int n1 = 25;
+    int n2 = 9;
+
+    if(n1%5) cout << "yes";
+
+
+    vector<int> arr = {1, 2, 3};
+    vector<vector<int>> operations = {{1, 2}};
+
+    for(vector<int> operation : operations) {
+        swap(arr.at(operation.at(0)), arr.at(operation.at(1)));
+    }
+
+    for(int i : arr) {
+        cout << i << " ";
+    }
+    
 
     return 0;
 }
