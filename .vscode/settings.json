@@ -5,6 +5,8 @@
         "xstring": "cpp",
         "set": "cpp",
         "ostream": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "string": "cpp",
+        "format": "cpp"
     }
 }

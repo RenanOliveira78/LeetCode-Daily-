@@ -7,6 +7,12 @@
 
 using namespace std;
 
+void toLowerString(string &s) {
+    for(char &c : s) {
+        c = tolower(c);
+    }
+}
+
 int main() {
     string word = "bicycle";
 
@@ -56,7 +62,12 @@ int main() {
     cout << endl;
     string z = "abacate"; 
 
-    cout << z.substr(0, 3);
+    cout << z.substr(0, 3) << endl;
+
+    string u = "EWIOUYnc";
+    toLowerString(u);
+
+    cout << u;
 
     return 0;
 }

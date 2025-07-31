@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <cctype>
+
 using namespace std;
 
 class Result{
@@ -15,10 +17,21 @@ public:
     //only start suggesting after 2 char input]
     //lower case
     //return empty array case not possible to output (no suggestion)
+    
+    void toLowerString(string &s) {
+        for(char &c : s) {
+            c = tolower(c);
+        }
+    }
 
     vector<vector<string>> searchSuggestions(vector<string> repository, string customerQuery) {
         //sorts repository keywords
         sort(repository.begin(), repository.end());
+        //lower case everything
+        toLowerString(customerQuery);
+        for(string &repo_keywords : repository) {
+            toLowerString(repo_keywords);
+        }
 
         vector<vector<string>> suggestions;
         //starts reading customer input
@@ -49,7 +62,7 @@ int main() {
 
     Result result;
     
-    vector<string> repository = {"mobile", "mouse", "moneypot", "monitor", "mousepad"};
+    vector<string> repository = {"Mobile", "Mouse", "Moneypot", "Monitor", "Mousepad"};
     string customerQuery = "mouse";
 
     vector<vector<string>> suggestions = result.searchSuggestions(repository, customerQuery);
