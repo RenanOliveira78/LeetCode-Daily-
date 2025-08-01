@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 #include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -11,6 +12,27 @@ void toLowerString(string &s) {
     for(char &c : s) {
         c = tolower(c);
     }
+}
+
+void plusMinus(vector<int> arr) {
+    float pos = 0;
+    float neg = 0;
+    float zer = 0;
+    
+    for(int num : arr) {
+        if(num > 0){
+            pos++;
+        }
+        else if(num == 0){
+            zer++;
+        } 
+        else{
+            neg ++;
+        }
+    }
+    
+    cout << fixed << setprecision(6) << pos/arr.size() << endl << neg/arr.size() << endl << zer/arr.size();
+    
 }
 
 int main() {
@@ -86,6 +108,9 @@ int main() {
         cout << i << " ";
     }
     
+
+
+    plusMinus({1,2,3,0});
 
     return 0;
 }
