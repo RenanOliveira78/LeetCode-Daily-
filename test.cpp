@@ -112,5 +112,10 @@ int main() {
 
     plusMinus({1,2,3,0});
 
+    cout << endl << endl;
+
+    string s1 = "0";
+    cout << s1.empty();
+
     return 0;
 }
