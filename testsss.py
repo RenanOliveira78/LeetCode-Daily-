@@ -18,4 +18,11 @@ elif noon == "AM" and h == 12:
 print(f"{h}:{m}:{s}")
 
 
+print(list(range(10)))
 
+a = [1,2,3]
+print(set(a))
+print(list(range(1, len(set(a))+1, 1)))
+
+b = [0]*len(a)
+print(b)
