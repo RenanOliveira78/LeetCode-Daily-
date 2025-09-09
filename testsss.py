@@ -26,3 +26,19 @@ print(list(range(1, len(set(a))+1, 1)))
 
 b = [0]*len(a)
 print(b)
+
+year = 2016
+print("this") if year%400 == 0 else None
+
+if year > 1917 and (year%400 == 0 or (year%4 == 0 and year%100 != 0)):
+    print("leapy year")
+
+for i in range(len(a)):
+    print(a[i])
+
+c = {1 ,3, 2}
+
+b = [0]*max(set(c))
+print(b)
+
+print(max(3, 2, 77))
